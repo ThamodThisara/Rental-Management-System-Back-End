@@ -19,6 +19,7 @@ public class CustomerServiceImpl implements CustomerService {
     final ModelMapper mapper;
     @Override
     public void add(Customer customer) {
+
         repository.save(mapper.map(customer, CustomerEntity.class));
     }
 
